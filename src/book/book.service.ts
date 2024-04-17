@@ -27,6 +27,10 @@ export class BookService {
     };
   }
 
+  show(id: number) {
+    return this.books.find((book) => book.id === id);
+  }
+
   update(id: number, book: any) {
     const index = this.books.findIndex((book) => book.id === id);
     this.books[index] = book;

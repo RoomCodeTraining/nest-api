@@ -14,4 +14,9 @@ export class BookController {
   create(@Body() book: any) {
     return this.bookService.create(book);
   }
+
+  @Get('/:id')
+  show() {
+    return this.bookService.get();
+  }
 }
